@@ -5,7 +5,7 @@ export interface LoginData {
 
 // VUEX login.State 参数类型
 export interface LoginState {
-  data?: any
+  author?: any
 }
 
 // GET_DATA_ASYN 接口参数类型

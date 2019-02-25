@@ -3,14 +3,12 @@ import { GetterTree, MutationTree, ActionTree } from 'vuex'
 import * as LoginApi from '@/api/login'
 
 const state: LoginState = {
-  login: {
-   author: undefined
-  }
+  // author: undefined
 }
 
 // 强制使用getter获取state
 const getters: GetterTree<LoginState, any> = {
-  author: (state: LoginState) => state.login.author
+  // author: (state: LoginState) => state.author
 }
 
 // 更改state
@@ -29,7 +27,9 @@ const actions: ActionTree<LoginState, any> = {
     commit('UPDATE_STATE', data)
   },
   // GET_DATA_ASYN({ commit, state: LoginState }) {
-  //   Login.getData()
+  //   LoginApi.getData().then(res => {
+  //     commit('UPDATE_STATE')
+  //   })
   // }
 }
 

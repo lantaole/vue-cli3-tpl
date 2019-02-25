@@ -1,37 +1,40 @@
 import { Component, Vue } from "vue-property-decorator"
 import { Getter, Action } from "vuex-class"
 import { LoginData } from '@/types/views/login.interface'
-import { Test } from "@/components"
-// import {  } from "@/components" // 组件
+import { Test } from "@/components" // 组件
 
-@Component({})
+@Component({
+    components: {
+        Test
+    }
+})
 export default class About extends Vue {
-  // Getter
-  // @Getter login.author
-    
-  // Action
-  // @Action GET_DATA_ASYN
+    // Getter
+    // @Getter author
 
-  // data
-  data: LoginData = {
-    pageName: 'login'
-  }
+    // Action
+    // @Action GET_DATA_ASYN
 
-  created() {
-    //
-  }
-    
-  activated() {
-    //
-  }
+    // data
+    data: LoginData = {
+        pageName: 'login'
+    }
 
-  mounted() {
-    //
-  }
+    created() {
+        // 
+    }
 
-  // 初始化函数
-  init() {
-    //
-  }
-    
+    activated() {
+        //
+    }
+
+    mounted() {
+        //
+    }
+
+    // 初始化函数
+    init() {
+        //
+    }
+
 }

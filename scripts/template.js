@@ -1,7 +1,7 @@
 /*
  * @Description: 页面快速生成脚本
  * @Date: 2018-12-06 10:28:08
- * @LastEditTime: 2018-12-10 09:43:50
+ * @LastEditTime: 2018-12-12 17:02:36
  */
 const fs = require('fs')
 const path = require('path')
@@ -10,9 +10,9 @@ const basePath = path.resolve(__dirname, '../src')
 const dirName = process.argv[2]
 const capPirName = dirName.substring(0, 1).toUpperCase() + dirName.substring(1)
 if (!dirName) {
-    console.log('文件夹名称不能为空！')
-    console.log('示例：npm run tep ${capPirName}')
-    process.exit(0)
+  console.log('文件夹名称不能为空！')
+  console.log('示例：npm run tep ${capPirName}')
+  process.exit(0)
 }
 
 /**
@@ -41,8 +41,8 @@ import { ${capPirName}Data } from '@/types/views/${dirName}.interface'
 @Component({})
 export default class About extends Vue {
   // Getter
-  // @Getter ${dirName}.author
-    
+  // @Getter author
+  
   // Action
   // @Action GET_DATA_ASYN
 
@@ -54,7 +54,7 @@ export default class About extends Vue {
   created() {
     //
   }
-    
+  
   activated() {
     //
   }
@@ -87,7 +87,7 @@ export interface ${capPirName}Data {
 
 // VUEX ${dirName}.State 参数类型
 export interface ${capPirName}State {
-  data?: any
+  author?: string
 }
 
 // GET_DATA_ASYN 接口参数类型
@@ -101,14 +101,12 @@ import { GetterTree, MutationTree, ActionTree } from 'vuex'
 import * as ${capPirName}Api from '@/api/${dirName}'
 
 const state: ${capPirName}State = {
-  ${dirName}: {
-   author: undefined
-  }
+  author: '三毛'
 }
 
 // 强制使用getter获取state
 const getters: GetterTree<${capPirName}State, any> = {
-  author: (state: ${capPirName}State) => state.${dirName}.author
+  author: (state: ${capPirName}State) => state.author
 }
 
 // 更改state
@@ -143,8 +141,8 @@ export default {
 // api 接口模版
 const apiTep = `import Api from '@/utils/request'
 
-export const getData = () => {
-  return Api.getData()
+export const getData = (data) => {
+  return Api.getData(data)
 }
 
 `
@@ -152,7 +150,7 @@ export const getData = () => {
 fs.mkdirSync(`${basePath}/views/${dirName}`) // mkdir
 
 process.chdir(`${basePath}/views/${dirName}`) // cd views
-fs.writeFileSync(`${dirName}.vue`, VueTep) // vue
+fs.writeFileSync(`${dirName}.vue`, VueTep) // vue 
 fs.writeFileSync(`${dirName}.ts`, tsTep) // ts
 fs.writeFileSync(`${dirName}.scss`, scssTep) // scss
 
