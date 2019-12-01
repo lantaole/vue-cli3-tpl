@@ -4,7 +4,7 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/chenfangsheng/vue-cli3-tpl.git"
+    "url": "https://github.com/lantaole/vue-cli3-tpl.git"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
