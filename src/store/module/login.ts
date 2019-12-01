@@ -26,11 +26,11 @@ const actions: ActionTree<LoginState, any> = {
   UPDATE_STATE_ASYN({ commit, state: LoginState }, data: LoginState) {
     commit('UPDATE_STATE', data)
   },
-  // GET_DATA_ASYN({ commit, state: LoginState }) {
-  //   LoginApi.getData().then(res => {
-  //     commit('UPDATE_STATE')
-  //   })
-  // }
+  GET_DATA_ASYN({ commit, state: LoginState }) {
+    LoginApi.getData().then(res => {
+      commit('UPDATE_STATE')
+    })
+  }
 }
 
 export default {

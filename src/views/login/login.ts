@@ -13,7 +13,7 @@ export default class About extends Vue {
     // @Getter author
 
     // Action
-    // @Action GET_DATA_ASYN
+    @Action GET_DATA_ASYN
 
     // data
     data: LoginData = {
@@ -21,7 +21,8 @@ export default class About extends Vue {
     }
 
     created() {
-        // 
+        //
+       this.GET_DATA_ASYN()
     }
 
     activated() {
