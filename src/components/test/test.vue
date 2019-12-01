@@ -11,10 +11,7 @@
 	@Component({})
 	export default class About extends Vue {
 		// prop
-		@Prop({
-			required: false,
-			default: ''
-		}) name!: string
+		@Prop({required: false, default: ''}) name!: string
 
 		// data
 		data: TestData = {
