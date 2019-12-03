@@ -17,7 +17,7 @@ export default class About extends Vue {
   }
 
   created() {
-    this.GET_DATA_ASYN()
+    // this.GET_DATA_ASYN()
   }
 
   activated() {

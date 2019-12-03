@@ -1,0 +1,28 @@
+
+
+
+/*弹性布局*/
+.flex{
+  display: flex;
+}
+.jst-ct{
+  justify-content: center;
+}
+.jst-fx-st{
+  justify-content: flex-start;
+}
+.jst-fx-sp-bt{
+  justify-content: space-between;
+}
+.fx-dn-cn{
+  flex-direction: column
+}
+.fx-wp{
+  flex-wrap: wrap;
+}
+.al-ct{
+  align-content:center;
+}
+.alg-ct{
+  align-items: center;
+}
