@@ -1,23 +1,16 @@
 <template>
 	<div id="app">
-		<template>
-			<div id="app">
-				<login-dialog></login-dialog>
-				<keep-alive>
-					<router-view v-if="$route.meta.keepAlive"/>
-				</keep-alive>
-				<router-view v-if="!$route.meta.keepAlive"/>
-			</div>
-		</template>
+		<keep-alive>
+			<router-view v-if="$route.meta.keepAlive"/>
+		</keep-alive>
+		<router-view v-if="!$route.meta.keepAlive"/>
 	</div>
 </template>
 <script lang="ts">
     import { Component, Vue, Prop } from "vue-property-decorator"
     import { Getter, Action } from 'vuex-class'
-    import { LoginDialog } from "@/components"
     @Component({
 		components: {
-            LoginDialog
 		}
 	})
     export default class About extends Vue {

@@ -1,21 +1,21 @@
-import { commonState } from '@/types/views/common.interface'
+import { CommonState } from '@/types/views/common.interface'
 import { GetterTree, MutationTree, ActionTree } from 'vuex'
 import * as HomeApi from '@/api/home'
 
-const state: commonState = {
+const state: CommonState = {
   author: '三毛',
   publicPath: ''
 }
 
 // 强制使用getter获取state
-const getters: GetterTree<commonState, any> = {
-  author: (state: commonState) => state.author
+const getters: GetterTree<CommonState, any> = {
+  author: (state: CommonState) => state.author
 }
 
 // 更改state
-const mutations: MutationTree<commonState> = {
+const mutations: MutationTree<CommonState> = {
   // 更新state都用该方法
-  UPDATE_STATE(state: commonState, data: commonState) {
+  UPDATE_STATE(state: CommonState, data: CommonState) {
     for (const key in data) {
       if (!data.hasOwnProperty(key)) { return }
       state[key] = data[key]
@@ -23,8 +23,8 @@ const mutations: MutationTree<commonState> = {
   }
 }
 
-const actions: ActionTree<commonState, any> = {
-  UPDATE_STATE_ASYN({ commit, state: commonState }, data: commonState) {
+const actions: ActionTree<CommonState, any> = {
+  UPDATE_STATE_ASYN({ commit, state: CommonState }, data: CommonState) {
     commit('UPDATE_STATE', data)
   },
   // GET_DATA_ASYN({ commit, state: LoginState }) {

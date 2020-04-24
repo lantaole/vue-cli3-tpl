@@ -4,7 +4,7 @@
 // }
 
 // VUEX home.State 参数类型
-export interface commonState {
+export interface CommonState {
   author?: string,
   publicPath: string
 }

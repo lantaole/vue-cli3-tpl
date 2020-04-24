@@ -2,4 +2,30 @@
 
 .login-wrap {
   width: 100%;
+  //background: url("/src/assets/img/login/01.png") no-repeat center;
+  background-size: 100%;
+  .login-wrap-main{
+    height: 90%;
+    .login-wrap-main-img{
+      transform: translate(18%, 135%);
+      .login-wrap-main-text{
+        margin-top: 20px;
+        .small{
+          color:rgba(255,255,255,0.6);
+          font-size: 16px;
+        }
+        .normal{
+          color: #fff;
+          padding-left: 29px;
+          font-size: 20px;
+        }
+      }
+    }
+    .login-wrap-form-wrap{
+      transform: translate(18%, 80%);
+      .login-wrap-form{
+        width: 500px;
+      }
+    }
+  }
 }

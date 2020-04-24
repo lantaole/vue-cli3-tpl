@@ -1,3 +1,3 @@
-import {commonMixin} from './module/commonMixin'
+import commonMixin from './module/commonMixin'
 
 export  { commonMixin }

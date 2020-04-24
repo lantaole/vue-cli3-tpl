@@ -1,14 +1,13 @@
 import { Component, Vue } from "vue-property-decorator"
 import { Getter, Action } from "vuex-class"
 import { LoginData } from '@/types/views/login.interface'
-import { Test } from "@/components" // 组件
+import CommonMixin from "@/mixins/module/commonMixin"; // 组件
 
 @Component({
     components: {
-        Test
     }
 })
-export default class About extends Vue {
+export default class Login extends CommonMixin {
     // Getter
     // @Getter author
 
@@ -17,7 +16,9 @@ export default class About extends Vue {
 
     // data
     data: LoginData = {
-        pageName: 'login'
+        pageName: 'login',
+        loginWrapperHeight: `${window.innerHeight}px`,
+        current: ['mail'],
     }
 
     created() {
