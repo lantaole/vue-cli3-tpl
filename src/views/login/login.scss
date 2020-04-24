@@ -5,9 +5,8 @@
   //background: url("/src/assets/img/login/01.png") no-repeat center;
   background-size: 100%;
   .login-wrap-main{
-    height: 90%;
+    height: 70%;
     .login-wrap-main-img{
-      transform: translate(18%, 135%);
       .login-wrap-main-text{
         margin-top: 20px;
         .small{
@@ -22,7 +21,6 @@
       }
     }
     .login-wrap-form-wrap{
-      transform: translate(18%, 80%);
       .login-wrap-form{
         width: 500px;
       }
