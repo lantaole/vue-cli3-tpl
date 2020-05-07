@@ -9,7 +9,6 @@ import "@/assets/scss/common.scss"
 Vue.config.productionTip = false
 
 Vue.use(Antd)
-
 new Vue({
   router,
   store,

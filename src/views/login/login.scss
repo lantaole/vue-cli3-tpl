@@ -23,6 +23,19 @@
     .login-wrap-form-wrap{
       .login-wrap-form{
         width: 500px;
+        .ant-input{
+          border-top: none;
+          border-right: none;
+          border-left: none;
+          border-radius: inherit;
+          &:focus{
+            box-shadow: none;
+          }
+        }
+        .login-wrap-btn{
+          background:linear-gradient(270deg,rgba(212,171,180,1) 0%,rgba(106,83,175,1) 100%);
+          color: #fff;
+        }
       }
     }
   }

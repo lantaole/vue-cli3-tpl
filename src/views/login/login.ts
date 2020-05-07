@@ -12,18 +12,29 @@ export default class Login extends CommonMixin {
     // @Getter author
 
     // Action
-    @Action GET_DATA_ASYN
+    // @Action GET_DATA_ASYN
 
     // data
     data: LoginData = {
         pageName: 'login',
         loginWrapperHeight: `${window.innerHeight}px`,
         current: ['mail'],
+        formLayout: 'horizontal',
+        form:  this.$form.createForm(this),
     }
+    public  handleSubmit(e): void {
+        e.preventDefault();
+        this.data.form.validateFields((err, values) => {
+            if (!err) {
+                console.log('Received values of form: ', values);
+            }
+        });
+    }
+
 
     created() {
         //
-       this.GET_DATA_ASYN()
+       // this.GET_DATA_ASYN()
     }
 
     activated() {
