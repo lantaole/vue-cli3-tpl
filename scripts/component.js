@@ -60,8 +60,6 @@ const VueTep = `<template>
 </script>
 
 <style lang="scss">
-  @import "@/assets/scss/variables.scss";
-
   .${dirName}-wrap {
     width: 100%;
   }

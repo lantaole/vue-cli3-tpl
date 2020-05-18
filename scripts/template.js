@@ -72,7 +72,7 @@ export default class About extends Vue {
 `
 
 // scss 模版
-const scssTep = `@import "@/assets/scss/variables.scss";
+const scssTep = `@import "@/assets/less/variables.less";
 
 .${dirName}-wrap {
   width: 100%;

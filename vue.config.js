@@ -24,7 +24,24 @@ module.exports = {
     modules: false, // 启用 CSS modules
     extract: true, // 是否使用css分离插件
     sourceMap: false, // 开启 CSS source maps?
-    loaderOptions: {} // css预设器配置项
+    loaderOptions: {
+      less: {
+        lessOptions: {
+          modifyVars: {
+            'primary-color': '#FD4C72',
+            'link-color': '#FD4C72',
+            'border-radius-base': '2px',
+          },
+          javascriptEnabled: true,
+        },
+      },
+    },
+  },
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'less',
+      patterns: [] // 引入全局样式变量
+    }
   },
   devServer: {
     port: 6061, // 端口

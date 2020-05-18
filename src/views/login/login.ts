@@ -19,7 +19,7 @@ export default class Login extends CommonMixin {
         pageName: 'login',
         loginWrapperHeight: `${window.innerHeight}px`,
         current: ['mail'],
-        formLayout: 'horizontal',
+        formLayout: 'vertical',
         form:  this.$form.createForm(this),
     }
     public  handleSubmit(e): void {

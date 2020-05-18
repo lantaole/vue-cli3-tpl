@@ -18,14 +18,14 @@
 					<a-menu v-model="data.current" mode="horizontal" class="w-100">
 						<a-menu-item key="mail"> 快速登录 </a-menu-item>
 					</a-menu>
-					<a-form class="umar-t20" :form="data.form" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }" @submit="handleSubmit">
-						<a-form-item >
+					<a-form class="umar-t20" :form="data.form" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }" @submit="handleSubmit" :layout="data.formLayout">
+						<a-form-item label="手机号" >
 							<a-input
 								v-decorator="['note', { rules: [{ required: true, message: '请输入手机号' }] }]"
 								placeholder="手机号"
 							/>
 						</a-form-item>
-						<a-form-item >
+						<a-form-item label="验证码" >
 							<a-input
 									v-decorator="['yzm', { rules: [{ required: true, message: '请输入验证码' }] }]"
 									placeholder="验证码"
