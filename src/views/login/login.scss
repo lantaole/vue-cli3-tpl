@@ -22,11 +22,28 @@
     .login-wrap-form-wrap{
       .login-wrap-form{
         width: 500px;
+        .ant-menu{
+          border-bottom: none;
+          text-align: left;
+          .ant-menu-item{
+            padding: 0;
+            width: 49px;
+            text-align: left;
+          }
+        }
+        .ant-form-item{
+          margin-bottom: 12px;
+        }
+        .ant-checkbox{
+          color: #B7B7B7;
+          font-size: 12px;
+        }
         .ant-input{
           border-top: none;
           border-right: none;
           border-left: none;
           border-radius: inherit;
+          padding-left: 0;
           &:focus{
             box-shadow: none;
           }

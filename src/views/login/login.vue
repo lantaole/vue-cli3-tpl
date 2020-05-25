@@ -19,22 +19,30 @@
 						<a-menu-item key="mail"> 快速登录 </a-menu-item>
 					</a-menu>
 					<a-form class="umar-t20" :form="data.form" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }" @submit="handleSubmit" :layout="data.formLayout">
-						<a-form-item label="手机号" >
+						<a-form-item  >
 							<a-input
 								v-decorator="['note', { rules: [{ required: true, message: '请输入手机号' }] }]"
 								placeholder="手机号"
 							/>
 						</a-form-item>
-						<a-form-item label="验证码" >
+						<a-form-item >
 							<a-input
 									v-decorator="['yzm', { rules: [{ required: true, message: '请输入验证码' }] }]"
 									placeholder="验证码"
 							/>
 						</a-form-item>
+						<a-form-item class="ta-l">
+							<a-checkbox v-decorator="['remember',{ valuePropName: 'checked',initialValue: false,},]">
+								<span class="fz-12 cr-b7b7b7">自动登录</span>
+							</a-checkbox>
+						</a-form-item>
 						<a-form-item>
 							<a-button block html-type="submit" size="large"  class="login-wrap-btn">
 								登录
 							</a-button>
+							<div class="cr-b7b7b7 fz-12 ta-l">
+								其他登录方式 <img :src="`${publicPath}/img/login/wechat.png`" alt="">
+							</div>
 						</a-form-item>
 					</a-form>
 				</div>
