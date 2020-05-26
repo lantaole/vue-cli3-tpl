@@ -26,10 +26,19 @@
 							/>
 						</a-form-item>
 						<a-form-item >
-							<a-input
-									v-decorator="['yzm', { rules: [{ required: true, message: '请输入验证码' }] }]"
-									placeholder="验证码"
-							/>
+							<a-row>
+								<a-col :span="16">
+									<a-input
+											v-decorator="['yzm', { rules: [{ required: true, message: '请输入验证码' }] }]"
+											placeholder="验证码"
+									/>
+								</a-col>
+								<a-col :span="8" class="login-wrap-main-text">
+									<a-button block html-type="submit" size="small" type="primary">
+										获取验证码
+									</a-button>
+								</a-col>
+							</a-row>
 						</a-form-item>
 						<a-form-item class="ta-l">
 							<a-checkbox v-decorator="['remember',{ valuePropName: 'checked',initialValue: false,},]">
@@ -37,12 +46,12 @@
 							</a-checkbox>
 						</a-form-item>
 						<a-form-item>
-							<a-button block html-type="submit" size="large"  class="login-wrap-btn">
+							<a-button block html-type="submit" size="large"  class="login-wrap-btn" >
 								登录
 							</a-button>
-							<div class="cr-b7b7b7 fz-12 ta-l">
-								其他登录方式 <img :src="`${publicPath}/img/login/wechat.png`" alt="">
-							</div>
+<!--							<div class="cr-b7b7b7 fz-12 ta-l">-->
+<!--								其他登录方式 <img :src="`${publicPath}/img/login/wechat.png`" alt="">-->
+<!--							</div>-->
 						</a-form-item>
 					</a-form>
 				</div>

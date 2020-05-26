@@ -31,6 +31,9 @@ export default class Login extends CommonMixin {
         });
     }
 
+    public  loginFunc(e): void {
+
+    }
 
     created() {
         //
