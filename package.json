@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "ant-design-vue": "^1.4.8",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "js-cookie": "^2.2.0",
     "vue": "^2.5.17",
     "vue-class-component": "^6.0.0",
